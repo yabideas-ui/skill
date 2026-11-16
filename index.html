@@ -163,6 +163,15 @@ body{padding-bottom:170px}
 .mt-form input{flex:1;padding:9px 11px;font-size:14px}
 .mt-ctl button.ask{background:var(--gold);color:var(--navy);border-color:var(--gold)}
 .mentor.chat .mt-ctl button.ask{background:var(--teal);color:#fff}
+.honest{margin-top:16px;padding:14px 16px;border-radius:12px;background:rgba(255,200,61,.07);border:1px solid rgba(255,200,61,.35)}
+.honest p{margin:6px 0;font-size:14px}
+.honest .ml{font-family:'Noto Sans Malayalam',Inter,sans-serif;color:var(--muted);font-size:13px}
+.stars{display:flex;align-items:center;gap:4px}
+.stars button{font-size:32px;line-height:1;background:none;border:0;cursor:pointer;color:rgba(255,255,255,.18);padding:2px;transition:transform .1s}
+.stars button:hover{transform:scale(1.15)}
+.stars button.on{color:var(--gold)}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.45;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.03);cursor:pointer}
+.consent input{margin-top:3px;accent-color:#12F2D8;width:16px;height:16px;flex:none}
 .err{color:var(--gold);font-size:13px;margin-top:8px}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 @media(max-width:700px){.grid3{grid-template-columns:1fr}}
@@ -240,6 +249,13 @@ table.lv td{padding:8px;border-bottom:1px solid var(--line);vertical-align:top}
         <li>A study roadmap paced to your free time, plus a 7-day starter plan</li>
         <li>A <b>resume builder</b> that fills itself from your results</li>
       </ul>
+      <div class="honest">
+        <div class="trytitle">Before you start</div>
+        <p><b>Please answer honestly.</b> Choose what is really true for you, not what sounds best. In the Skill Check, pick <b>"I don't know"</b> when you're not sure. Honest answers give you a correct result.</p>
+        <p><b>This is a suggestion report, not a final decision.</b> Your results are based only on your answers. Use them as guidance, try the free tasks, and talk to a mentor before you make big career decisions.</p>
+        <p><b>Privacy:</b> to improve this tool, Cyber Kalari saves your answers and progress <b>anonymously</b>. Your name and phone number are saved only if you agree: tick the box at the start, or tap Send on WhatsApp.</p>
+        <p class="ml">സത്യസന്ധമായി ഉത്തരം നൽകൂ. നിങ്ങളുടെ ഉത്തരങ്ങൾ അനുസരിച്ചുള്ള ഒരു suggestion report മാത്രമാണ് ഇത്, അന്തിമ തീരുമാനമല്ല.</p>
+      </div>
       <h3 style="margin-top:20px;font-size:16px">Which one are you?</h3>
       <div class="grid3" style="margin-top:10px">
         <button class="btn" onclick="startMode('fresher')">I'm a fresher / student</button>
@@ -263,6 +279,8 @@ table.lv td{padding:8px;border-bottom:1px solid var(--line);vertical-align:top}
         <div style="grid-column:1/-1"><label class="f" for="goal">What do you want help with?</label><select id="goal"></select></div>
         <div style="grid-column:1/-1" class="hide" id="target-wrap"><label class="f" for="target">Which field do you want to move into?</label><select id="target"></select></div>
         <div><label class="f" for="name">Your first name (optional)</label><input type="text" id="name" maxlength="30" placeholder="e.g. Arjun"></div>
+        <div><label class="f" for="s1-phone">WhatsApp number (optional)</label><input type="text" id="s1-phone" maxlength="20" placeholder="+91 …" inputmode="tel"></div>
+        <label class="consent" style="grid-column:1/-1"><input type="checkbox" id="s1-consent"> Cyber Kalari may save my name and number with my answers and contact me about my career. <span class="muted">(Optional. Leave unticked to stay anonymous.)</span></label>
         <div class="fr-only"><label class="f" for="study">What did you study / are studying?</label>
           <select id="study">
             <option value="">Choose one</option>
@@ -360,9 +378,10 @@ table.lv td{padding:8px;border-bottom:1px solid var(--line);vertical-align:top}
   <!-- RESULTS -->
   <section id="s-res" class="hide">
     <div class="card hero">
-      <span class="pill">YOUR CAREER &amp; SKILL REPORT</span>
+      <span class="pill">YOUR SUGGESTION REPORT</span>
       <h1 style="margin-top:12px" id="r-title"></h1>
       <p class="muted" id="r-sub" style="margin-top:8px"></p>
+      <p class="note" style="margin-top:10px">This is a suggestion report based only on your answers. It's guidance to help you explore, not a final decision. If any answer wasn't honest or you guessed a lot, retake it for a more accurate result.</p>
       <div id="r-step"></div>
     </div>
 
@@ -421,7 +440,7 @@ table.lv td{padding:8px;border-bottom:1px solid var(--line);vertical-align:top}
       </div>
       <a class="btn gold" id="ld-send" href="#" target="_blank" rel="noopener" style="display:inline-block;margin-top:14px;text-decoration:none">Send on WhatsApp</a>
       <div class="err hide" id="ld-err">Please enter your name and WhatsApp number.</div>
-      <p class="muted" style="font-size:12px;margin-top:10px">WhatsApp opens with your details and report summary ready. Nothing is sent until you press Send in WhatsApp, and we only use it to contact you about your career. If the button doesn't open, message us on WhatsApp at <b>+91 83048 80336</b>.</p>
+      <p class="muted" style="font-size:12px;margin-top:10px">When you tap the button, Cyber Kalari saves your details with your report, and WhatsApp opens with the message ready to send. We only use it to contact you about your career. If the button doesn't open, message us on WhatsApp at <b>+91 83048 80336</b>.</p>
     </div>
 
     <!-- RESUME BUILDER -->
@@ -509,6 +528,29 @@ table.lv td{padding:8px;border-bottom:1px solid var(--line);vertical-align:top}
       </div>
     </div>
 
+    <!-- FEEDBACK -->
+    <div class="card" id="fb">
+      <span class="pill teal">YOUR FEEDBACK</span>
+      <h2 style="margin-top:10px">How was your experience?</h2>
+      <p class="muted" style="font-size:14px">Your feedback helps us make Career Compass and Cya Mentor better for the next student. It takes 30 seconds.</p>
+      <label class="f" style="margin-top:12px">Overall rating</label>
+      <div class="stars" id="fb-stars" role="radiogroup" aria-label="Overall rating">
+        <button type="button" data-v="1" aria-label="1 star">★</button><button type="button" data-v="2" aria-label="2 stars">★</button><button type="button" data-v="3" aria-label="3 stars">★</button><button type="button" data-v="4" aria-label="4 stars">★</button><button type="button" data-v="5" aria-label="5 stars">★</button>
+        <span class="muted" id="fb-star-txt" style="font-size:13px;margin-left:8px"></span>
+      </div>
+      <label class="f" style="margin-top:14px">Did the result feel right for you?</label>
+      <div class="chips fb-one" data-q="accurate"><button type="button" class="chip">Yes, very accurate</button><button type="button" class="chip">Partly</button><button type="button" class="chip">Not really</button></div>
+      <label class="f" style="margin-top:14px">Was Cya Mentor helpful?</label>
+      <div class="chips fb-one" data-q="cya"><button type="button" class="chip">Yes</button><button type="button" class="chip">Somewhat</button><button type="button" class="chip">No</button><button type="button" class="chip">Didn't use</button></div>
+      <label class="f" style="margin-top:14px">Would you recommend it to a friend?</label>
+      <div class="chips fb-one" data-q="recommend"><button type="button" class="chip">Yes</button><button type="button" class="chip">Maybe</button><button type="button" class="chip">No</button></div>
+      <label class="f" for="fb-text" style="margin-top:14px">What should we improve? (optional)</label>
+      <textarea id="fb-text" rows="3" maxlength="600" placeholder="Anything confusing, missing or wrong? English or Malayalam is fine."></textarea>
+      <a class="btn" id="fb-send" href="#" target="_blank" rel="noopener" style="display:inline-block;margin-top:12px;text-decoration:none">Send feedback on WhatsApp</a>
+      <div class="err hide" id="fb-err">Please choose a star rating first.</div>
+      <p class="muted" style="font-size:12px;margin-top:8px">When you tap the button, your feedback is saved for Cyber Kalari, and WhatsApp opens with it ready to send. Your name is included only if you entered it.</p>
+    </div>
+
     <div class="card hide" id="ai-card">
       <span class="pill teal">AI CAREER COACH</span>
       <h3 style="margin-top:10px">Get personal advice on your report</h3>
@@ -522,7 +564,7 @@ table.lv td{padding:8px;border-bottom:1px solid var(--line);vertical-align:top}
 
     <div class="card">
       <h3>Next step</h3>
-      <p>Save your full report for yourself, or share it with Cyber Kalari using the WhatsApp form above.</p>
+      <p>Save your full report for yourself, or share it with Cyber Kalari using the WhatsApp form above. Please also leave your feedback above. It helps us improve.</p>
       <div class="row" style="margin-top:10px">
         <button class="btn" onclick="copyReport()">Copy my report</button>
         <a class="btn ghost" style="text-decoration:none" href="https://www.instagram.com/cyberkalari/" target="_blank" rel="noopener">Instagram @cyberkalari</a>
@@ -914,7 +956,7 @@ function go(pos){
     $("steplabel").textContent=`Step ${pos} of ${N}`;$("stepname").textContent=stepName(id);
     $("bar").style.width=Math.round((pos-1)/N*100+4)+"%";
     $("next").textContent=pos===N?"See my report":"Next";
-    sayStep(id);
+    sayStep(id);trackStep(id,pos,N);
   }
   window.scrollTo({top:0,behavior:"smooth"});
 }
@@ -935,9 +977,9 @@ function next(){
 }
 function prev(){if(st.pos<=1)go(0);else go(st.pos-1);}
 function restart(){
-  st.likert.fill(null);st.skills.clear();st.ans=DOMAINS.map(d=>Array(d.qs.length).fill(null));ldWants.clear();document.querySelectorAll("#ld-wants .chip").forEach(b=>b.classList.remove("on"));["ld-name","ld-phone"].forEach(id=>$(id).value="");st.result=null;st.cvInit=false;st.proj.clear();st.picks.clear();st.tot.fill(null);st.seq=[];
+  st.likert.fill(null);st.skills.clear();st.ans=DOMAINS.map(d=>Array(d.qs.length).fill(null));ldWants.clear();resetFb();document.querySelectorAll("#ld-wants .chip").forEach(b=>b.classList.remove("on"));["ld-name","ld-phone"].forEach(id=>$(id).value="");st.result=null;st.cvInit=false;st.proj.clear();st.picks.clear();st.tot.fill(null);st.seq=[];
   document.querySelectorAll(".scale button,.chip,#tot button").forEach(b=>b.classList.remove("on"));$("target-wrap").classList.add("hide");
-  ["name","bg","edu","age","hours","where","study","status","itrole","years","goal","target"].forEach(id=>$(id).value="");
+  ["name","bg","edu","age","hours","where","study","status","itrole","years","goal","target","s1-phone"].forEach(id=>$(id).value="");$("s1-consent").checked=false;
   document.querySelectorAll("[data-cv]").forEach(e=>{if(e.dataset.cv==="langs")e.value="English, Malayalam";else if(e.tagName!=="SELECT")e.value="";});
   $("cv").classList.add("hide");$("cv-cta").classList.remove("hide");$("jobs-card").classList.add("hide");jobLoc=null;$("jd").value="";$("jd-out").innerHTML="";
   buildSkillSteps();$("ai-out").textContent="";go(0);
@@ -1103,7 +1145,7 @@ function render(){
     <h3 style="margin-top:18px">Your 7-day starter plan</h3>
     <p class="muted" style="font-size:14px">About 30–60 minutes a day.</p>
     <ol class="days">${p.week.map((d,i)=>`<li><b>Day ${i+1}:</b> ${d}</li>`).join("")}</ol>`;
-  renderFocus();renderInterest();initLead();sayReport();
+  renderFocus();renderInterest();initLead();initFb();sayReport();trackReport();
 }
 const lvT=s=>s.L==null?"Not tested":LV[s.L].t;
 const GROWTASK={support:"volunteer for server, Active Directory or network tasks, and write knowledge-base articles for common fixes",
@@ -1189,7 +1231,7 @@ function cvVal(k){const e=document.querySelector(`[data-cv="${k}"]`);return e?e.
 function lines(s){return s.split(/\n+/).map(x=>x.replace(/^[-•*]\s*/,"").trim()).filter(Boolean);}
 function targetTitle(){const v=$("cv-target").value;return v==="__other"?cvVal("targetCustom"):v;}
 function targetPath(){const v=$("cv-target").value;const f=st.result.scores.concat(st.result.related).find(s=>LADDER[s.k].some(l=>l.includes(v)));return f?f.k:(st.result.focusK||st.result.scores[0].k);}
-function openCV(){
+function openCV(){track({resume_opened:"Yes"});ga("resume_open");
   $("cv-cta").classList.add("hide");$("cv").classList.remove("hide");
   if(!st.cvInit){st.cvInit=true;prefillCV();}
   renderCV();initJobs();say("cv");$("cv").scrollIntoView({behavior:"smooth"});
@@ -1336,6 +1378,7 @@ let dl=null;
 function nativeSave(filename,data){const url=URL.createObjectURL(data instanceof Blob?data:new Blob([data],{type:"text/html"}));
   const a=document.createElement("a");a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),4000);}
 async function cvDownload(kind){
+  track({resume_downloaded:"Yes ("+kind+")"});ga("resume_download",{format:kind});
   if(!dl){const base=(cvVal("fullname")||"My").replace(/[^A-Za-z0-9 _-]/g,"").trim().replace(/\s+/g,"_")||"My";
     nativeSave(base+(kind==="docx"?"_Resume.docx":"_Resume.html"),kind==="docx"?new Blob([buildDocx()],{type:"application/vnd.openxmlformats-officedocument.wordprocessingml.document"}):buildHtmlCV());toast("Resume downloaded");return;}
   const base=(cvVal("fullname")||"My").replace(/[^A-Za-z0-9 _-]/g,"").trim().replace(/\s+/g,"_")||"My";
@@ -1432,7 +1475,7 @@ function renderJobs(){
       <div class="muted" style="font-size:13px;margin:4px 0 8px">Your resume covers ${have.length} of ${kw.length} key skills for this role${have.length<kw.length?`. Missing: ${kw.filter(k=>!have.includes(k)).slice(0,4).join(", ")}`:""}</div>
       <div class="row" style="gap:6px">${jobLinks(j.t,jobLoc,entry).map(([n,u])=>`<a class="btn ghost sm" href="${esc(u)}" target="_blank" rel="noopener">${n}</a>`).join("")}</div></div>`;}).join("");
 }
-function analyseJD(){
+function analyseJD(){track({jd_checked:"Yes"});ga("jd_check");
   const jd=$("jd").value.trim(),out=$("jd-out");
   if(jd.length<80){out.innerHTML=`<p class="err">Paste the full job description (at least a few lines).</p>`;return;}
   const cv=cvText()+"\n"+[...st.skills].map(s=>SKILL_LABEL[s]).join(" ");
@@ -1493,10 +1536,12 @@ function leadMsg(){
 function updateLead(){const a=$("ld-send");a.href=`https://wa.me/${CK_WA}?text=${encodeURIComponent(leadMsg())}`;}
 function initLead(){
   if(st.result&&st.result.name&&!$("ld-name").value)$("ld-name").value=st.result.name;
+  if($("s1-phone").value&&!$("ld-phone").value)$("ld-phone").value=$("s1-phone").value;
   $("ld-wants").onclick=e=>{const b=e.target.closest("button");if(!b)return;const w=b.dataset.w;ldWants.has(w)?ldWants.delete(w):ldWants.add(w);b.classList.toggle("on");updateLead();};
   ["ld-name","ld-phone","ld-time"].forEach(id=>{$(id).oninput=updateLead;$(id).onchange=updateLead;});
   $("ld-send").onclick=e=>{const ok=$("ld-name").value.trim()&&/\d{8,}/.test($("ld-phone").value.replace(/\D/g,""));
-    if(!ok){e.preventDefault();$("ld-err").classList.remove("hide");return;}$("ld-err").classList.add("hide");updateLead();};
+    if(!ok){e.preventDefault();$("ld-err").classList.remove("hide");return;}$("ld-err").classList.add("hide");
+    track({lead_name:$("ld-name").value.trim(),lead_phone:$("ld-phone").value.trim(),lead_wants:[...ldWants].join(", ")||"Not specified",lead_time:$("ld-time").value});ga("generate_lead");updateLead();};
   updateLead();
 }
 
@@ -1508,8 +1553,8 @@ const NO_IN="This device has no Indian English voice, so a standard English voic
 const NO_ML="This device has no Malayalam voice, so Cya speaks in English. The text stays in Malayalam.";
 const ML_NAMES={support:"IT Support",network:"Networking",soc:"Cyber Security",cloud:"Cloud",sysadmin:"System Admin",elv:"CCTV, ELV",grc:"GRC",digital:"Digital Marketing"};
 const LINES={
- intro:{en:"Hi, I'm {A} from Cyber Kalari. In about 20 minutes, I'll help you find the right IT path, check your real skill level, and build your resume. First, tell me who you are.",
-        ml:"നമസ്കാരം, ഞാൻ Cyber Kalari-യുടെ {A} ആണ്. ഏകദേശം 20 മിനിറ്റിൽ നിങ്ങൾക്ക് ചേരുന്ന IT career path കണ്ടെത്താനും, നിങ്ങളുടെ യഥാർത്ഥ skill level അറിയാനും, resume ഉണ്ടാക്കാനും ഞാൻ സഹായിക്കാം. ആദ്യം, നിങ്ങൾ ആരാണെന്ന് പറയൂ."},
+ intro:{en:"Hi, I'm {A} from Cyber Kalari. In about 20 minutes, I'll help you find the right IT path, check your real skill level, and build your resume. Please answer honestly, and choose I don't know when you're not sure. Your report is a suggestion based on your answers, not a final decision. First, tell me who you are.",
+        ml:"നമസ്കാരം, ഞാൻ Cyber Kalari-യുടെ {A} ആണ്. ഏകദേശം 20 മിനിറ്റിൽ നിങ്ങൾക്ക് ചേരുന്ന IT career path കണ്ടെത്താനും, നിങ്ങളുടെ യഥാർത്ഥ skill level അറിയാനും, resume ഉണ്ടാക്കാനും ഞാൻ സഹായിക്കാം. സത്യസന്ധമായി ഉത്തരം നൽകൂ, ഉറപ്പില്ലെങ്കിൽ I don't know തിരഞ്ഞെടുക്കൂ. നിങ്ങളുടെ ഉത്തരങ്ങൾ അനുസരിച്ചുള്ള ഒരു suggestion report ആണ് കിട്ടുക, അന്തിമ തീരുമാനമല്ല. ആദ്യം, നിങ്ങൾ ആരാണെന്ന് പറയൂ."},
  "1":{en:"Tell me a little about yourself, and what you want help with. Your whole report is shaped by this.",
       ml:"നിങ്ങളെക്കുറിച്ചും, എന്ത് help ആണ് വേണ്ടതെന്നും പറയൂ. ഇതനുസരിച്ചാണ് നിങ്ങളുടെ report തയ്യാറാക്കുന്നത്."},
  "2":{en:"Now, what do you enjoy? Pick the areas you're curious about, then answer honestly. There are no wrong answers.",
@@ -1580,8 +1625,8 @@ function sayReport(){
   const iMl=R.clarity==="clear"?`നിങ്ങളുടെ interest വ്യക്തമായി ${M(a)}-ലേക്കാണ്.`:R.clarity==="two"?`നിങ്ങൾക്ക് ${M(a)}-ലും ${M(b)}-ലും നല്ല interest ഉണ്ട്.`:"നിങ്ങളുടെ interest ഇപ്പോഴും വ്യക്തമല്ല, അത് സാധാരണമാണ്. 3-week taster plan പരീക്ഷിച്ചു നോക്കൂ.";
   const gEn=R.goal==="move"?`Your route into ${E(fK)} is laid out below.`:R.goal==="grow"?`Your growth plan in ${E(fK)} shows your next step.`:`Your strongest match to explore is ${E(top.k)}, and your tested level there is ${LV[top.L].t}.`;
   const gMl=R.goal==="move"?`${M(fK)}-ലേക്കുള്ള നിങ്ങളുടെ route താഴെ കൊടുത്തിട്ടുണ്ട്.`:R.goal==="grow"?`${M(fK)}-ൽ അടുത്ത step എന്താണെന്ന് growth plan-ൽ കാണാം.`:`നിങ്ങൾക്ക് ഏറ്റവും ചേരുന്ന path ${M(top.k)} ആണ്, അതിൽ നിങ്ങളുടെ tested level ${LV[top.L].t} ആണ്.`;
-  say(null,null,{en:`${nm}your report is ready. ${iEn} ${gEn} Scroll down for jobs you can apply for, your roadmap and your resume. If you'd like help, send your report to Cyber Kalari on WhatsApp.`,
-    ml:`${nm}നിങ്ങളുടെ report തയ്യാറായി. ${iMl} ${gMl} താഴെ apply ചെയ്യാവുന്ന jobs, roadmap, resume builder എന്നിവയുണ്ട്. Help വേണമെങ്കിൽ, report WhatsApp വഴി Cyber Kalari-ക്ക് അയക്കൂ.`});
+  say(null,null,{en:`${nm}your report is ready. ${iEn} ${gEn} Remember, this is a suggestion based on your answers. Scroll down for jobs you can apply for, your roadmap and your resume. If you'd like help, send your report to Cyber Kalari on WhatsApp.`,
+    ml:`${nm}നിങ്ങളുടെ report തയ്യാറായി. ${iMl} ${gMl} ഇത് നിങ്ങളുടെ ഉത്തരങ്ങൾ അനുസരിച്ചുള്ള ഒരു suggestion മാത്രമാണ്. താഴെ apply ചെയ്യാവുന്ന jobs, roadmap, resume builder എന്നിവയുണ്ട്. Help വേണമെങ്കിൽ, report WhatsApp വഴി Cyber Kalari-ക്ക് അയക്കൂ.`});
 }
 
 /* ---------------- ASK CIYA: typed questions, spoken answers (free, rule-based; AI when available) ---------------- */
@@ -1672,7 +1717,7 @@ function faqAnswer(q){
 function chatAdd(who,text){const d=document.createElement("div");d.className="cm "+who;d.textContent=text;$("mt-msgs").append(d);$("mt-msgs").scrollTop=1e6;return d;}
 async function askCya(q){
   q=(q||$("mt-q").value).trim();if(!q)return;$("mt-q").value="";
-  chatAdd("me",q);
+  chatAdd("me",q);track({asked_cya:(trk.asked_cya||0)+1});ga("ask_cya");
   const lang=(/[ഀ-ൿ]/.test(q)||MANGLISH.test(q))?"ml":mt.lang;
   if(sampleFn){
     const d=chatAdd("ciya","…");
@@ -1700,12 +1745,94 @@ function toggleChat(){
 const QUICK=[["Which field suits me?","എനിക്ക് ഏത് field ചേരും?"],["Can a fresher start in IT?","Fresher-ന് IT-യിൽ തുടങ്ങാമോ?"],["Cyber security engane padikkam?","Cyber security എങ്ങനെ പഠിക്കാം?"],["Coding venamo?","Coding വേണോ?"],["Course details","Course details"]];
 function renderQuick(){$("mt-quick").innerHTML=QUICK.map(q=>`<button type="button" class="chip">${esc(q[mt.lang==="ml"?1:0])}</button>`).join("");}
 
+/* ---------------- FEEDBACK via WhatsApp ---------------- */
+const fb={stars:0,a:{}};
+const STAR_TXT=["","Poor","Fair","Good","Very good","Excellent"];
+function fbMsg(){
+  const R=st.result;if(!R)return "";
+  const top=R.scores[0];
+  const type=R.it?"IT professional":R.fr?"Fresher":"Career changer";
+  const nm=($("ld-name")&&$("ld-name").value.trim())||R.name||"";
+  return [`Career Compass feedback – Cyber Kalari`,
+    `Rating: ${"★".repeat(fb.stars)}${"☆".repeat(5-fb.stars)} (${fb.stars}/5 – ${STAR_TXT[fb.stars]})`,
+    `Result felt right: ${fb.a.accurate||"–"}`,`Cya Mentor helpful: ${fb.a.cya||"–"}`,`Would recommend: ${fb.a.recommend||"–"}`,
+    `Improve: ${$("fb-text").value.trim()||"–"}`,
+    `(${type}${nm?" – "+nm:""} | Top match: ${PATHS[top.k].short} | Goal: ${{discover:"Find my field",move:"Move into a field",grow:"Grow"}[R.goal]})`].join("\n");
+}
+function updFb(){$("fb-send").href=`https://wa.me/${CK_WA}?text=${encodeURIComponent(fbMsg())}`;}
+function initFb(){
+  $("fb-stars").onclick=e=>{const b=e.target.closest("button");if(!b)return;fb.stars=+b.dataset.v;
+    $("fb-stars").querySelectorAll("button").forEach(x=>x.classList.toggle("on",+x.dataset.v<=fb.stars));$("fb-star-txt").textContent=STAR_TXT[fb.stars];$("fb-err").classList.add("hide");updFb();};
+  document.querySelectorAll(".fb-one").forEach(g=>{g.onclick=e=>{const b=e.target.closest("button");if(!b)return;fb.a[g.dataset.q]=b.textContent;
+    g.querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===b));updFb();};});
+  $("fb-text").oninput=updFb;
+  $("fb-send").onclick=e=>{if(!fb.stars){e.preventDefault();$("fb-err").classList.remove("hide");return;}updFb();
+    track({feedback_stars:fb.stars,feedback_accurate:fb.a.accurate||"",feedback_cya:fb.a.cya||"",feedback_recommend:fb.a.recommend||"",feedback_text:$("fb-text").value.trim()});ga("feedback",{stars:fb.stars});
+    setTimeout(()=>say(null,null,{en:"Thank you for your feedback. It really helps us improve.",ml:"നിങ്ങളുടെ feedback-ന് നന്ദി. ഇത് ഞങ്ങളെ മെച്ചപ്പെടാൻ ശരിക്കും സഹായിക്കും."}),300);};
+  updFb();
+}
+function resetFb(){fb.stars=0;fb.a={};document.querySelectorAll("#fb-stars button,.fb-one .chip").forEach(b=>b.classList.remove("on"));$("fb-text").value="";$("fb-star-txt").textContent="";}
+
+/* ---------------- ANALYTICS & PROGRESS TRACKING (own website only) ----------------
+   SHEET_URL: Google Apps Script web-app URL → one row per visit in Google Sheets (updates as they go).
+   GA_ID:     Google Analytics 4 Measurement ID (G-XXXXXXX) → visitor counts, sources, events.
+   Leave either empty to switch it off. Answers are anonymous; name/phone only with consent. */
+const SHEET_URL="";
+const GA_ID="G-0YZQHV3D60";
+const SID=(window.crypto&&crypto.randomUUID)?crypto.randomUUID():Date.now().toString(36)+Math.random().toString(36).slice(2);
+const SRC=(()=>{try{const q=new URLSearchParams(location.search);const s=q.get("src")||q.get("utm_source");if(s)return s.slice(0,40);
+  if(document.referrer){const h=new URL(document.referrer).hostname.replace(/^www\./,"");if(!/cyberkalari/.test(h))return h;}}catch(e){}return "direct";})();
+const trk={session_id:SID,source:SRC,device:/iPhone|iPad/i.test(navigator.userAgent)?"iPhone/iPad":/Android/i.test(navigator.userAgent)?"Android":/Mobi/i.test(navigator.userAgent)?"Mobile":"Desktop",status:"Just opened",last_step:"Start screen",steps_done:0};
+function post(beacon){
+  if(!SHEET_URL)return;trk.language=(typeof mt!=="undefined"&&mt.lang==="ml")?"Malayalam":"English";
+  const body=JSON.stringify(trk);
+  try{if(beacon&&navigator.sendBeacon)navigator.sendBeacon(SHEET_URL,new Blob([body],{type:"text/plain;charset=utf-8"}));
+      else fetch(SHEET_URL,{method:"POST",mode:"no-cors",keepalive:true,headers:{"Content-Type":"text/plain;charset=utf-8"},body});}catch(e){}
+}
+function track(extra,beacon){Object.assign(trk,extra||{});post(beacon);}
+function ga(name,params){try{if(window.gtag)gtag("event",name,params||{});}catch(e){}}
+if(GA_ID){const s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id="+GA_ID;document.head.appendChild(s);
+  window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag("js",new Date());gtag("config",GA_ID);}
+function whoText(){
+  if(st.mode==="it")return `IT professional – ${selTxt("itrole").split(" / ")[0]||"?"}, ${YEARS_TXT[$("years").value]||"?"}, ${selTxt("edu")||"?"}`;
+  if(st.mode==="fresher")return `Fresher – ${selTxt("study").split(" / ")[0]||"?"}, ${selTxt("status")||"?"}`;
+  return `Career changer – ${selTxt("bg")||"?"}, ${selTxt("edu")||"?"}, age ${selTxt("age")||"?"}`;
+}
+function answersSoFar(){
+  return JSON.stringify({picks:[...st.picks],likert:st.likert,thisOrThat:st.tot,ticks:[...st.skills],
+    skillCheck:DOMAINS.map((d,i)=>d.id+":"+st.ans[i].map(a=>a==="c"?"✓":a==="w"?"✗":a==="idk"?"?":"-").join(""))});
+}
+function contactIfConsented(){
+  if(!$("s1-consent")||!$("s1-consent").checked)return {};
+  const ph=$("s1-phone").value.trim();if(!/\d{8,}/.test(ph.replace(/\D/g,"")))return {};
+  return {lead_name:$("name").value.trim()||"(no name)",lead_phone:ph,lead_wants:"Gave number at start"};
+}
+function trackStep(id,pos,N){
+  track(Object.assign({status:"In progress",last_step:stepName(id),steps_done:pos,total_steps:N,user_type:whoText(),
+    goal:selTxt("goal"),target_field:$("target").value?PATHS[$("target").value].short:"",study_hours:selTxt("hours"),location:selTxt("where"),
+    answers_json:answersSoFar()},pos>1?contactIfConsented():{}));
+  ga("step_view",{step_name:stepName(id),step_number:pos,user_type:st.mode});
+}
+function trackReport(){
+  const R=st.result,P=k=>PATHS[k].short;
+  track(Object.assign({status:"Completed",last_step:"Report",steps_done:st.seq.length,
+    interest_result:R.clarity==="clear"?"Clear":R.clarity==="two"?"Two strong":"Not clear yet",
+    top_interests:R.intRank.slice(0,3).map(x=>P(x.k)+" ("+INTLV(x.v).t+")").join(", "),
+    top_match:P(R.scores[0].k)+" – "+R.scores[0].lab.t+" / "+LV[R.scores[0].L].t,
+    match_2:P(R.scores[1].k)+" – "+R.scores[1].lab.t,match_3:P(R.scores[2].k)+" – "+R.scores[2].lab.t,
+    skill_levels:DOMAINS.map(d=>d.name+": "+LV[R.dom[d.id].lvl].t).join("; "),
+    skills_ticked:[...st.skills].map(s=>SKILL_LABEL[s]).join(", "),answers_json:answersSoFar()},contactIfConsented()));
+  ga("report_view",{top_match:R.scores[0].k,user_type:st.mode,goal:R.goal});
+}
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="hidden"&&trk.status!=="Just opened")track({},true);});
+window.addEventListener("load",()=>{post();ga("page_open",{source:SRC});});
+
 /* ---------------- REPORT / COPY ---------------- */
 function reportText(){
   const R=st.result,top=R.scores.slice(0,3),p=PATHS[top[0].k];
   const who=R.it?`IT professional | Role: ${selTxt("itrole")} | Experience: ${YEARS_TXT[$("years").value]} | Education: ${selTxt("edu")}`:
     R.fr?`Fresher | Studied: ${selTxt("study")} | Status: ${selTxt("status")}`:`Working professional | Background: ${selTxt("bg")} | Education: ${selTxt("edu")} | Age: ${selTxt("age")}`;
-  return [`CYBER KALARI CAREER COMPASS REPORT${R.name?" – "+R.name:""}`,who,
+  return [`CYBER KALARI CAREER COMPASS – SUGGESTION REPORT${R.name?" – "+R.name:""}`,`(Based only on the person's own answers. Guidance, not a final decision.)`,who,
   `Goal: ${selTxt("goal")}${R.goal==="move"?" → "+PATHS[R.focusK].name:""}`,
   `Study time: ${HOURS_TXT[R.hours]} per week | Target: ${selTxt("where")}`,
   `INTEREST: ${R.clarity==="clear"?"clear – "+PATHS[R.intRank[0].k].short:R.clarity==="two"?"two strong – "+PATHS[R.intRank[0].k].short+" and "+PATHS[R.intRank[1].k].short:"not clear yet – try the 3-week taster plan"} | Top interests: ${R.intRank.slice(0,3).map(x=>PATHS[x.k].short+" ("+INTLV(x.v).t+")").join(", ")}`,
