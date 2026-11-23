@@ -1,0 +1,332 @@
+{
+ "checked": "2026-11-23",
+ "note": "US figures are projections for 2025–2035. India and GCC governments don't yet publish field-by-field AI job data, so we don't show any for them.",
+ "fields": {
+  "support": {
+   "name": "IT Support / Helpdesk",
+   "badge": [
+    "Changing",
+    "mid"
+   ],
+   "data": [
+    {
+     "t": "US forecast: computer support specialist jobs −3% (2025–35), but about 48,700 openings every year.",
+     "s": "U.S. Bureau of Labor Statistics (BLS), Occupational Outlook Handbook",
+     "u": "https://www.bls.gov/ooh/computer-and-information-technology/computer-support-specialists.htm",
+     "d": "Aug 2026"
+    }
+   ],
+   "changes": [
+    {
+     "t": "Chatbots and automated troubleshooting tools take over simple support requests, so fewer user-support staff are expected to be needed overall.",
+     "s": "U.S. Bureau of Labor Statistics (BLS), Occupational Outlook Handbook",
+     "u": "https://www.bls.gov/ooh/computer-and-information-technology/computer-support-specialists.htm",
+     "d": "Aug 2026"
+    },
+    {
+     "t": "Automation can free support staff to handle more complex cases.",
+     "s": "U.S. Bureau of Labor Statistics (BLS), Occupational Outlook Handbook",
+     "u": "https://www.bls.gov/ooh/computer-and-information-technology/computer-support-specialists.htm",
+     "d": "Aug 2026"
+    },
+    {
+     "t": "Network support specialists are still projected to grow slightly (+1%).",
+     "s": "U.S. Bureau of Labor Statistics (BLS), Occupational Outlook Handbook",
+     "u": "https://www.bls.gov/ooh/computer-and-information-technology/computer-support-specialists.htm",
+     "d": "Aug 2026"
+    }
+   ],
+   "people": [
+    "Hands-on fixes: hardware, printers, Wi-Fi, on-site setup",
+    "Complex problems that a chatbot can't solve",
+    "Explaining technology calmly to stressed users"
+   ]
+  },
+  "network": {
+   "name": "Networking",
+   "badge": [
+    "Changing",
+    "mid"
+   ],
+   "data": [
+    {
+     "t": "US forecast: network and computer systems administrator jobs −4% (2025–35), still about 13,400 openings a year.",
+     "s": "U.S. Bureau of Labor Statistics (BLS), Occupational Outlook Handbook",
+     "u": "https://www.bls.gov/ooh/computer-and-information-technology/network-and-computer-systems-administrators.htm",
+     "d": "Aug 2026"
+    },
+    {
+     "t": "US forecast: computer network architect jobs +8% (2025–35), about 9,600 openings a year.",
+     "s": "U.S. Bureau of Labor Statistics (BLS), Occupational Outlook Handbook",
+     "u": "https://www.bls.gov/ooh/computer-and-information-technology/computer-network-architects.htm",
+     "d": "Aug 2026"
+    }
+   ],
+   "changes": [
+    {
+     "t": "Some admin tasks are moving to DevOps engineers and to Networks-as-a-Service providers, and admins increasingly automate routine tasks.",
+     "s": "U.S. Bureau of Labor Statistics (BLS), Occupational Outlook Handbook",
+     "u": "https://www.bls.gov/ooh/computer-and-information-technology/network-and-computer-systems-administrators.htm",
+     "d": "Aug 2026"
+    },
+    {
+     "t": "Companies investing in AI and expanding cloud computing need more network architects.",
+     "s": "U.S. Bureau of Labor Statistics (BLS), Occupational Outlook Handbook",
+     "u": "https://www.bls.gov/ooh/computer-and-information-technology/computer-network-architects.htm",
+     "d": "Aug 2026"
+    }
+   ],
+   "people": [
+    "Designing networks and planning upgrades",
+    "Troubleshooting real outages across many devices",
+    "Network automation skills (Python, Ansible) to manage scale"
+   ]
+  },
+  "soc": {
+   "name": "Cyber Security – SOC Analyst",
+   "badge": [
+    "Growing fast",
+    "up"
+   ],
+   "data": [
+    {
+     "t": "US forecast: information security analyst jobs +21% (2025–35), much faster than average, about 14,100 openings a year.",
+     "s": "U.S. Bureau of Labor Statistics (BLS), Occupational Outlook Handbook",
+     "u": "https://www.bls.gov/ooh/computer-and-information-technology/information-security-analysts.htm",
+     "d": "Aug 2026"
+    },
+    {
+     "t": "Networks and cybersecurity are among the fastest-growing skills worldwide.",
+     "s": "World Economic Forum, Future of Jobs Report 2025",
+     "u": "https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/",
+     "d": "Jan 2025"
+    }
+   ],
+   "changes": [
+    {
+     "t": "More cyberattacks, and more use of AI and e-commerce, increase the need for security work.",
+     "s": "U.S. Bureau of Labor Statistics (BLS), Occupational Outlook Handbook",
+     "u": "https://www.bls.gov/ooh/computer-and-information-technology/information-security-analysts.htm",
+     "d": "Aug 2026"
+    }
+   ],
+   "people": [
+    "Investigating alerts and deciding what is a real attack",
+    "Responding to incidents under pressure",
+    "Understanding networks deeply, the base of security work"
+   ]
+  },
+  "sysadmin": {
+   "name": "System Admin (Windows / Linux)",
+   "badge": [
+    "Changing",
+    "mid"
+   ],
+   "data": [
+    {
+     "t": "US forecast: network and computer systems administrator jobs −4% (2025–35), still about 13,400 openings a year.",
+     "s": "U.S. Bureau of Labor Statistics (BLS), Occupational Outlook Handbook",
+     "u": "https://www.bls.gov/ooh/computer-and-information-technology/network-and-computer-systems-administrators.htm",
+     "d": "Aug 2026"
+    }
+   ],
+   "changes": [
+    {
+     "t": "Administrators increasingly automate routine tasks, and some tasks move to DevOps-focused software developers.",
+     "s": "U.S. Bureau of Labor Statistics (BLS), Occupational Outlook Handbook",
+     "u": "https://www.bls.gov/ooh/computer-and-information-technology/network-and-computer-systems-administrators.htm",
+     "d": "Aug 2026"
+    }
+   ],
+   "people": [
+    "Scripting and automation (PowerShell, Bash)",
+    "Identity and access: Active Directory, Entra ID",
+    "Fixing problems when automation fails"
+   ]
+  },
+  "cloud": {
+   "name": "Cloud / DevOps",
+   "badge": [
+    "Growing",
+    "up"
+   ],
+   "data": [
+    {
+     "t": "US forecast: computer network architect jobs +8% (2025–35), driven partly by cloud expansion and AI investment.",
+     "s": "U.S. Bureau of Labor Statistics (BLS), Occupational Outlook Handbook",
+     "u": "https://www.bls.gov/ooh/computer-and-information-technology/computer-network-architects.htm",
+     "d": "Aug 2026"
+    }
+   ],
+   "changes": [
+    {
+     "t": "The continued expansion of cloud computing increases demand for people who design networks and infrastructure.",
+     "s": "U.S. Bureau of Labor Statistics (BLS), Occupational Outlook Handbook",
+     "u": "https://www.bls.gov/ooh/computer-and-information-technology/computer-network-architects.htm",
+     "d": "Aug 2026"
+    },
+    {
+     "t": "Some traditional sysadmin tasks are now done by software developers focused on DevOps.",
+     "s": "U.S. Bureau of Labor Statistics (BLS), Occupational Outlook Handbook",
+     "u": "https://www.bls.gov/ooh/computer-and-information-technology/network-and-computer-systems-administrators.htm",
+     "d": "Aug 2026"
+    }
+   ],
+   "people": [
+    "Designing secure, reliable cloud setups",
+    "Infrastructure as code and automation",
+    "Controlling cost and security in the cloud"
+   ]
+  },
+  "elv": {
+   "name": "CCTV / ELV & Cabling",
+   "badge": [
+    "No data yet",
+    "none"
+   ],
+   "data": [
+    {
+     "t": "We found no reliable published data on how AI changes CCTV, ELV or cabling jobs. Related fact: BLS expects electricity demand to rise, largely due to AI adoption and infrastructure such as data centres.",
+     "s": "U.S. Bureau of Labor Statistics, Employment Projections 2025–35",
+     "u": "https://www.bls.gov/news.release/ecopro.nr0.htm",
+     "d": "Aug 2026"
+    }
+   ],
+   "changes": [],
+   "people": [
+    "Physical installation, cabling and site work",
+    "Testing and fault-finding on site",
+    "Configuring IP cameras, NVRs and access control"
+   ]
+  },
+  "grc": {
+   "name": "GRC / IT Audit",
+   "badge": [
+    "Growing",
+    "up"
+   ],
+   "data": [
+    {
+     "t": "Security Management Specialists rank among the top five fastest-growing roles worldwide to 2030.",
+     "s": "World Economic Forum, Future of Jobs Report 2025",
+     "u": "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/2-jobs-outlook/",
+     "d": "Jan 2025"
+    }
+   ],
+   "changes": [],
+   "people": [
+    "Judging risk and explaining it to managers",
+    "Audits, policies and compliance decisions",
+    "Keeping up with new rules about data and AI"
+   ]
+  },
+  "digital": {
+   "name": "Digital Marketing",
+   "badge": [
+    "Mixed",
+    "mid"
+   ],
+   "data": [
+    {
+     "t": "US forecast: advertising, promotions and marketing manager jobs +6% (2025–35), about 36,300 openings a year.",
+     "s": "U.S. Bureau of Labor Statistics (BLS), Occupational Outlook Handbook",
+     "u": "https://www.bls.gov/ooh/management/advertising-promotions-and-marketing-managers.htm",
+     "d": "Aug 2026"
+    },
+    {
+     "t": "Graphic designers are now among the fastest-declining roles as generative AI reshapes the job market.",
+     "s": "World Economic Forum, Future of Jobs Report 2025",
+     "u": "https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/",
+     "d": "Jan 2025"
+    }
+   ],
+   "changes": [],
+   "people": [
+    "Strategy, brand judgement and planning campaigns",
+    "Understanding customers and reading data",
+    "Checking AI-made content for accuracy and quality"
+   ]
+  },
+  "nonit": {
+   "name": "My job isn't in IT",
+   "badge": [
+    "Most exposed",
+    "down"
+   ],
+   "data": [
+    {
+     "t": "Clerical jobs have the highest exposure to generative AI. Most jobs are expected to change rather than disappear.",
+     "s": "International Labour Organization (ILO), Generative AI and jobs: a 2025 update",
+     "u": "https://www.ilo.org/publications/generative-ai-and-jobs-2025-update",
+     "d": "May 2025"
+    },
+    {
+     "t": "Cashiers, administrative assistants and other clerical roles are among the fastest-declining jobs.",
+     "s": "World Economic Forum, Future of Jobs Report 2025",
+     "u": "https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/",
+     "d": "Jan 2025"
+    },
+    {
+     "t": "US forecast 2025–35: cashier jobs −6.5% and about 141,800 fewer customer service representatives, partly due to AI and automation.",
+     "s": "BLS projections, summarised by the Japan Institute for Labour Policy and Training",
+     "u": "https://www.jil.go.jp/foreign/jihou/2026/10/usa_01.html",
+     "d": "Oct 2026"
+    }
+   ],
+   "changes": [],
+   "people": [
+    "Your work experience, customer skills and reliability still count when you move to IT",
+    "IT Support is the most common first step into IT"
+   ]
+  }
+ },
+ "general": [
+  {
+   "h": "More jobs are being created than lost, but many will change",
+   "t": "By 2030, global trends including AI are expected to create about 170 million jobs and displace about 92 million, a net gain of about 78 million.",
+   "s": "World Economic Forum, Future of Jobs Report 2025",
+   "u": "https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/",
+   "d": "Jan 2025"
+  },
+  {
+   "h": "Employers will retrain, and some will cut",
+   "t": "77% of employers plan to upskill their staff, while about 41% plan to reduce their workforce as AI automates some tasks. Nearly 40% of job skills are expected to change by 2030.",
+   "s": "World Economic Forum, Future of Jobs Report 2025",
+   "u": "https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/",
+   "d": "Jan 2025"
+  },
+  {
+   "h": "Most jobs will be changed by AI, not removed",
+   "t": "One in four workers worldwide is in a job with some exposure to generative AI. Because human input is still needed, most jobs are expected to be transformed rather than made redundant.",
+   "s": "International Labour Organization (ILO)",
+   "u": "https://www.ilo.org/publications/generative-ai-and-jobs-2025-update",
+   "d": "May 2025"
+  },
+  {
+   "h": "More job ads now ask for AI skills",
+   "t": "In 2025, 2.5% of all US job postings mentioned AI skills, up 55% from the year before.",
+   "s": "Stanford AI Index Report 2026 (job-postings data by Lightcast)",
+   "u": "https://lightcast.io/resources/blog/stanford-ai-2026",
+   "d": "Apr 2026"
+  },
+  {
+   "h": "India: tech hiring continues, but slower than revenue",
+   "t": "In FY26, India's tech industry revenue grew 6.1% while its workforce grew only 2.3%. More than 2 million professionals were upskilled in AI.",
+   "s": "NASSCOM Annual Strategic Review 2026 (reported by YourStory)",
+   "u": "https://yourstory.com/enterprise-story/2026/02/india-tech-industry-revenue-to-touch-315-billion-in-fy26-nasscom",
+   "d": "Feb 2026"
+  },
+  {
+   "h": "Strong fundamentals still matter",
+   "t": "NASSCOM warned that as AI takes over routine work, India risks a workforce that relies on AI without deep technical skills.",
+   "s": "NASSCOM, The State of AI-Native Talent in India (reported by YourStory)",
+   "u": "https://yourstory.com/2026/07/as-ai-automates-routine-tasks-nasscom-flags-decline-in-deep-engineering-skills",
+   "d": "Jul 2026"
+  }
+ ],
+ "unknown": [
+  "How AI will change IT jobs in Kerala or the GCC specifically. No reliable public data yet.",
+  "Exactly how many entry-level IT jobs AI will replace. Forecasts disagree, so we don't quote a number.",
+  "Salaries for AI-related IT roles in Kerala. No trusted data, so we don't show any."
+ ]
+}
